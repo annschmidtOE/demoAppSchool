@@ -10,15 +10,14 @@ import java.util.List;
 @Service
 public class StudentService {
 
-    @Autowired
-    StudentRepository studentRepository;
-
-    @Autowired
-    public StudentService(StudentRepository studentRepository) {
-
-    }
 
     public List<Student> getStudents(){
-        return studentRepository.findAll();
-                 }
+        return List.of(
+                new Student(
+                        1L,
+                        "Anna",
+                        "annaschmidt@gmail.com",
+                        LocalDate.of(1995, Month.NOVEMBER,22),
+                        26)
+        ); }
 }
