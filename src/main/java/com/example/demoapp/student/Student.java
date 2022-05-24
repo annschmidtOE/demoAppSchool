@@ -4,27 +4,34 @@ import java.time.LocalDate;
 
 public class Student {
     private Long id;
-    private String name;
+    private String firstName;
+    private String lastName;
     String email;
     private LocalDate dob;
     private Integer age;
 
+    private Integer klasseTrin;
+
     public Student() {
     }
 
-    public Student(Long id, String name, String email, LocalDate dob, Integer age) {
-        this.id = id;
-        this.name = name;
+    public Student(String firstName, String lastName, String email, LocalDate dob, Integer age, Integer klasseTrin) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.dob = dob;
         this.age = age;
+        this.klasseTrin = klasseTrin;
     }
 
-    public Student(String name, String email, LocalDate dob, Integer age) {
-        this.name = name;
+    public Student(Long id, String firstName, String lastName, String email, LocalDate dob, Integer age, Integer klasseTrin) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.dob = dob;
         this.age = age;
+        this.klasseTrin = klasseTrin;
     }
 
     public Long getId() {
@@ -35,12 +42,28 @@ public class Student {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Integer getKlasseTrin() {
+        return klasseTrin;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setKlasseTrin(Integer klasseTrin) {
+        this.klasseTrin = klasseTrin;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {

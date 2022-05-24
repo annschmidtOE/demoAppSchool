@@ -16,8 +16,10 @@ public class StudentService {
                 new Student(
                         1L,
                         "Anna",
+                        "Schmidt",
                         "annaschmidt@gmail.com",
                         LocalDate.of(1995, Month.NOVEMBER,22),
-                        26)
+                        26,
+                        8)
         ); }
 }
